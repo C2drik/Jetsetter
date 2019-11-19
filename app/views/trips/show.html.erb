@@ -1,7 +1,6 @@
 TripsController#Show
 
 <h2><%= @trip.start_date %></h2>
-<p><%= @trip.city %></p>
 <p><%= @trip.end_city %></p>
 
 <%= link_to 'Book now', trip_bookings_path(@trip), method: :post, class: 'btn btn-success'  %>
@@ -9,12 +8,3 @@ TripsController#Show
 
 <%= link_to 'Back', trips_path, class: 'btn btn-success' %>
 
-
-<h2>Bookins</h2>
-
-<% @trip.bookings.each do |booking| %>
-<div class="booking">
-  <p>status: <%= booking.status %>, user: <%= booking.user.email %>, city: <%= booking.trip.city %></p>
-</div>
-
-<% end %>
