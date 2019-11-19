@@ -27,7 +27,7 @@ users_attributes = [
   {
 
     email: 'arafath@gmail.com',
-     password: '123456'
+     password: '123455'
 
 
   },
