@@ -1,6 +1,16 @@
-#Index
+Trips#Index
 
 <% @trips.each do |trip| %>
-  <h2><%= trip.name %></h2>
   <p><%= trip.city %></p>
-<% end %>
+  <p><<%= trip.start_date %></p>
+  <p><%= trip.end_date %></p>
+  <p><%= trip.start_city %></p>
+  <p><%= trip.end_city %></p>
+  <p><%= trip.jet_id %></p>
+  <p><%= trip.price %></p>
+  <p><%= trip.jet_name %></p>
+  <p><%= trip.jet_model %></p>
+  <p><%= jet_seats %></p>
+  <p><%= jet_description %></p>
+  <p><%= user_id %></p>
+<%end %>

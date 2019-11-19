@@ -1,11 +1,7 @@
-#New
-<form action="/trips" method="post">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <label for="name">Name: </label>
-  <input type="text" name="trip[name]" id="name">
+TripsController#New
 
-  <label for="city">City: </label>
-  <input type="text" name="trip[city]" id="city">
 
-  <input type="submit">
-</form>
+<%= simple_form_for [@trip] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "add a trip", class: "btn btn-primary" %>
+<% end %>
