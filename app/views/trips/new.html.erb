@@ -1,0 +1,7 @@
+TripsController#New
+
+
+<%= simple_form_for [@trip] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "add a trip", class: "btn btn-primary" %>
+<% end %>

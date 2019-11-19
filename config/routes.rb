@@ -4,9 +4,4 @@ Rails.application.routes.draw do
     resources :trips do
        resources :bookings, only: [:index, :new, :create, :show, :update]
     end
-    resources :dashboard, only: :show
   end
-
-
-
-
