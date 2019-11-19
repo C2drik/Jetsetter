@@ -10,6 +10,8 @@ puts 'Cleaning database...'
 Trip.destroy_all
 User.destroy_all
 
+puts 'Creating users...'
+
 users_attributes = [
   {
 
@@ -26,22 +28,21 @@ users_attributes = [
 
   {
 
-    email: 'arafath@gmail.com',
-     password: '123455'
-
-
+  email: 'arafath@gmail.com',
+  password: '123455'
   },
 
-   {
+  {
 
-    email: 'cédrik@gmail.com',
-     password: '123456'
+  email: 'cédrik@gmail.com',
+  password: '123456'
   }
 
 ]
 User.create!(users_attributes)
 
 puts 'Creating trip...'
+
 trips_attributes = [
   {
     city:      'Bombay',
@@ -53,9 +54,11 @@ trips_attributes = [
     price:        5,
     jet_name:         'Dishoom',
     jet_model: 'Falcon',
+    user_id: "43",
     jet_seats: 5,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
     user_id: 15
+
   },
   {
     city:     'Marseille',
@@ -67,6 +70,7 @@ trips_attributes = [
     price:        10,
     jet_name:         'Flora',
     jet_model: 'Viper',
+    user_id: "42",
     jet_seats: 10,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
     user_id: 15
@@ -82,9 +86,11 @@ trips_attributes = [
     price: 15,
     jet_name: 'Flights',
     jet_model: 'Flexjet',
+    user_id: "42",
     jet_seats: 20,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
     user_id: 15
+
   },
   {
     city: 'Paris',
@@ -96,9 +102,11 @@ trips_attributes = [
     price:        10,
     jet_name:         'Plane',
     jet_model: 'Easyjet',
+    user_id: "44",
     jet_seats: 20,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
     user_id: 15
+
   }
 
 ]
