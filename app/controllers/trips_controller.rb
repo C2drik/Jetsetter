@@ -26,11 +26,12 @@ before_action :set_trip, only: [:show, :edit, :update]
   end
 
   def update
-    @trip.update(params(trip_params)
-    redirect_to trip_path
+    @trip.update(trip_params)
+      redirect_to trip_path(@trip)
   end
 
   def destroy
+
   end
 
 private
