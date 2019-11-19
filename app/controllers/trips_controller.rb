@@ -25,14 +25,10 @@ before_action :set_trip, only: [:show, :edit, :update]
   def edit
   end
 
-  # def update
-  #   if @trip.update
-  #     redirect_to trip_path(@trip)
-  #   else
-  #     render :edit
-  #   end
-  # end
-
+  def update
+    @trip.update(params(trip_params)
+    redirect_to trip_path
+  end
 
   def destroy
   end

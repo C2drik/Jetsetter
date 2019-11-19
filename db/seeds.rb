@@ -46,7 +46,7 @@ trips_attributes = [
   {
     city:      'Bombay',
     start_date: 'Mardi 16 novembre 2019',
-    end_date: 'Jeudi 25 novembre 2019',
+    end_date: 'JeuUser.create!(users_attributes)di 25 novembre 2019',
     start_city: 'London',
     end_city: 'Paris',
     jet_id: 1,
@@ -55,7 +55,7 @@ trips_attributes = [
     jet_model: 'Falcon',
     jet_seats: 5,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user_id: 1
+    user_id: 15
   },
   {
     city:     'Marseille',
@@ -69,7 +69,7 @@ trips_attributes = [
     jet_model: 'Viper',
     jet_seats: 10,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user_id: 2
+    user_id: 15
   },
 
  {
@@ -84,7 +84,7 @@ trips_attributes = [
     jet_model: 'Flexjet',
     jet_seats: 20,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user_id: 3
+    user_id: 15
   },
   {
     city: 'Paris',
@@ -98,12 +98,29 @@ trips_attributes = [
     jet_model: 'Easyjet',
     jet_seats: 20,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user_id: 4
+    user_id: 15
   }
 
 ]
 
 Trip.create!(trips_attributes)
 
-puts 'Finished'
+puts 'Creating booking...'
+bookings_attributes = [
+  {
+    status:  'pending',
+    user_id: "16",
+    trip_id: "13",
+  },
 
+  {
+    status:  'confirmed',
+    user_id: "16",
+    trip_id: "14",
+  },
+
+]
+
+Booking.create!(bookings_attributes)
+
+puts 'Finished'
