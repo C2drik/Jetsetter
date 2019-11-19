@@ -2,3 +2,7 @@ TripsController#Show
 
 <h2><%= @trip.start_date %></h2>
 <p><%= @trip.city %></p>
+<p><%= @trip.end_city %></p>
+
+<%= link_to 'Book now', new_trip_booking_path(@trip)  %>
+<%= link_to 'Back', trips_path, class: 'btn btn-success' %>
