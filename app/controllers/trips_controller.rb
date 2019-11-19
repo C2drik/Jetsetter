@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-before_action :set_trip, only: [:show, :edit, :update]
+  before_action :set_trip, only: [:show, :edit, :update]
 
   def index
     @trips = Trip.all
@@ -27,14 +27,13 @@ before_action :set_trip, only: [:show, :edit, :update]
 
   def update
     @trip.update(trip_params)
-      redirect_to trip_path(@trip)
+    redirect_to trip_path(@trip)
   end
 
   def destroy
-
   end
 
-private
+  private
 
   def set_trip
     @trip = Trip.find(params[:id])
