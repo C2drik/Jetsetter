@@ -5,8 +5,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
-<<<<<<< HEAD
-=======
   def create
     @trip = Trip.find(params[:trip_id])
     @booking = Booking.new
@@ -19,5 +17,4 @@ class BookingsController < ApplicationController
     end
   end
 
->>>>>>> master
 end
