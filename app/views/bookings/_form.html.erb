@@ -1,4 +1,4 @@
-<%= simple_form_for(booking) do |f| %>
-  <%= f.input :status %>
+<%= simple_form_for [@trip, @booking] do |f| %>
+  <%= f.input :status, collection: Booking::STATUSES %>
   <%= f.submit %>
 <% end %>
