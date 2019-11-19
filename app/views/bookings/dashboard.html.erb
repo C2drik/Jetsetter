@@ -1,2 +1,11 @@
-<h1>booking#Dashboard</h1>
-<p>P</p>
+<h1>Your bookings</h1>
+<% @trips = Trip.where(user_id: 3]) %>
+<% @trips.each |t| do %>
+    <li>
+     <%= trip.start_city %> <%= trip.end_city %> : <%= trip.start_date %> <%= trip._date %> <% trip.price %>
+    </li>
+  <% end %>
+Réduire
+
+
+
