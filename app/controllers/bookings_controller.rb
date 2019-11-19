@@ -5,4 +5,19 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+<<<<<<< HEAD
+=======
+  def create
+    @trip = Trip.find(params[:trip_id])
+    @booking = Booking.new
+    @booking.user = current_user
+    @booking.trip = @trip
+    if @booking.save
+      redirect_to trip_path(@trip)
+    else
+      render "trips/show"
+    end
+  end
+
+>>>>>>> master
 end
