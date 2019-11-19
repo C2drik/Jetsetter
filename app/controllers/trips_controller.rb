@@ -13,25 +13,33 @@ before_action :set_trip, only: [:show, :edit, :update]
   end
 
   def create
-    @trip.save
-    redirect_to trip_path(@trip)
+    @trip = Trip.new(trip_params)
+    @trip.user = current_user
+    if @trip.save
+      redirect_to trips_path
+    else
+      render :new
+    end
   end
 
   def edit
   end
 
   def update
-    if @trip.update(params[:trip])
-      redirect_to trip_path(@trip)
-    else
-      render :edit
-    end
+    @trip.update(params(trip_params)
+    redirect_to trip_path
   end
 
   def destroy
   end
 
+private
+
   def set_trip
     @trip = Trip.find(params[:id])
+  end
+
+  def trip_params
+    params.require(:trip).permit(:city, :start_date, :end_date, :start_city, :end_city, :jet_id, :price, :jet_name, :jet_model, :jet_seats, :jet_description)
   end
 end
