@@ -11,6 +11,6 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
+
   end
 end
