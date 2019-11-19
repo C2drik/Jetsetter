@@ -1,0 +1,7 @@
+<h1>Bookings#update</h1>
+<%= simple_form_for[@booking, @trip] do |f| %>
+    <%= f.status %>
+    <%= f.user_id %>
+    <%= f.trip_id %>
+    <%= f.submit "Book your trip", class: "btn btn-primary" %>
+<% end %>
