@@ -11,10 +11,6 @@
           <%= f.input :jet_model, label: 'le model de votre jet' %>
           <%= f.input :jet_seats, label: 'Combien de places disponibles' %>
           <%= f.input :jet_description, label: 'Une description pour le vol' %>
-          <div class="form-group">
-            <label for="exampleFormControlFile1">Ajouter une image pour votre vol</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
           <%= f.submit "add a trip", class: "btn btn-ghost-confirmed" %>
         <% end %>
     </div>
