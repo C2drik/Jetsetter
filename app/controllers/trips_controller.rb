@@ -26,7 +26,7 @@ before_action :set_trip, only: [:show, :edit, :update]
   end
 
   def update
-    @trip.update(params(trip_params)
+    @trip.update(params(trip_params))
     redirect_to trip_path
   end
 
