@@ -16,5 +16,4 @@ class BookingsController < ApplicationController
       render "trips/show"
     end
   end
-
 end
