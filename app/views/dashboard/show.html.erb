@@ -1,15 +1,22 @@
 <div class="container mt-5">
       <h1>Mes réservations de vol</h1>
 
+      <select id="trip-status-filter-btn">
+          <option value="#">select a trip status:</option>
+          <option value="pending">pending ⚫️</option>
+          <option value="confirmed">confirmed 🔵</option>
+      </select>
+
+        <%#
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             <%= "⚫️" %>
+          <button id="trip-status-filter-btn" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">pending <%= "⚫️" %></a>
-            <a class="dropdown-item" href="#">confirmed <%= "🔵" %></a>
+            <a class="dropdown-item" href="#">pending ⚫️</a>
+            <a class="dropdown-item" href="#">confirmed 🔵</a>
           </div>
         </div>
+        %>
 
         <table class="table">
         <thead>
