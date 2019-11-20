@@ -1,8 +1,7 @@
 class DashboardController < ApplicationController
 
-  def dashboard
+  def show
     @bookings = current_user.bookings
     @trips = current_user.trips
   end
-
 end

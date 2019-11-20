@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  STATUSES = ["Pending", "Confirmed"]
+  STATUSES = ["pending", "confirmed"]
   belongs_to :user
   belongs_to :trip
   validates :status, inclusion: { in: STATUSES }

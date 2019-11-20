@@ -1,0 +1,90 @@
+<div class="container mt-5">
+      <h1>Your bookings</h1>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <%= "⚫️" %>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">pending <%= "⚫️" %></a>
+            <a class="dropdown-item" href="#">confirmed <%= "🔵" %></a>
+          </div>
+        </div>
+
+        <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Statut</th>
+            <th scope="col">Départ</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Date de départ</th>
+            <th scope="col">Date d'arrivée</th>
+            <th scope="col">Nom du Jet</th>
+            <th scope="col">Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% @bookings.each_with_index do |b, index| %>
+          <tr class="<%= b.status %>">
+            <!-- <th scope="row"> -->
+            <!-- </th> -->
+            <td>
+              <% if b.status == 'pending' %>
+                <%= "⚫️" %>
+              <% else %>
+                <%= "🔵" %>
+              <% end %>
+            </td>
+            <td><%= b.trip.start_city %></td>
+            <td><%= b.trip.end_city %></td>
+            <td><%= b.trip.start_date.strftime("%d/%m/%Y") %></td>
+            <td><%= b.trip.end_date.strftime("%d/%m/%Y") %></td>
+            <td><%= b.trip.jet_name %></td>
+            <td><%= b.trip.price %> € HT</td>
+          </tr>
+            <% end %>
+        </tbody>
+      </table>
+
+
+      <h1>Your trips</h1>
+<!--
+      <ul>
+          <% @trips.each do |t| %>
+          <li><%= t.city %> <%= t.start_date %>
+            <br> <%= t.jet_name  %> <%= t.jet_name  %> <%= t.jet_model  %> <%= t.jet_seats %>
+            </li>
+          <% end %>
+      </ul> -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Départ</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Date de départ</th>
+      <th scope="col">Date d'arrivée</th>
+      <th scope="col">Nom du Jet</th>
+      <th scope="col">Prix</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @trips.each_with_index do |t, index| %>
+    <tr>
+      <th scope="row"><%= index + 1 %></th>
+      <td><%= t.start_city %></td>
+      <td><%= t.end_city %></td>
+      <td><%= t.start_date.strftime("%d/%m/%Y") %></td>
+      <td><%= t.end_date.strftime("%d/%m/%Y") %></td>
+      <td><%= t.jet_name %></td>
+      <td><%= t.price %> € HT</td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
+
+
+
+</div>
+
