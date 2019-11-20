@@ -106,7 +106,7 @@ trips_attributes = [
     user_id: "44",
     jet_seats: 20,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user: User.find_by(email: 'etienne@gmail.com')
+    user: User.find_by(email: 'arafath@gmail.com')
 
   }
 
@@ -135,6 +135,22 @@ Booking.create!(status: 'pending',
   trip: Trip.find_by(city: 'Bombay')
   )
 
+
+Booking.create!(status: 'pending',
+  user: User.find_by(email: 'etienne@gmail.com'),
+  trip: Trip.find_by(city: 'Marseille')
+  )
+
+
+Booking.create!(status: 'pending',
+  user: User.find_by(email: 'etienne@gmail.com'),
+  trip: Trip.find_by(city: 'Paris')
+  )
+
+Booking.create!(status: 'pending',
+  user: User.find_by(email: 'arafath@gmail.com'),
+  trip: Trip.find_by(city: 'London')
+  )
 # Booking.create!(bookings_attributes)
 
 puts 'Finished'

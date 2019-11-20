@@ -2,7 +2,18 @@
 
 <ul>
 <% @bookings.each do |b| %>
-<li><%= b.status %><%= b.user_id %><%= b.trip_id  %></li>
+<li><%= b.status %> <%= b.user_id %> <%= b.trip_id  %>
+  <%= link_to 'Edit', new_trip_booking_path(@trip), class: 'btn btn-success' %></li>
+<% end %>
+</ul>
+
+<h1>Your trips</h1>
+
+<ul>
+<% @trips.each do |t| %>
+<li><%= t.city %> <%= t.start_date %>
+  <br> <%= t.jet_name  %> <%= t.jet_name  %> <%= t.jet_model  %> <%= t.jet_seats %>
+  </li>
 <% end %>
 </ul>
 
