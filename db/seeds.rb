@@ -116,28 +116,38 @@ Trip.create!(trips_attributes)
 
 puts 'Creating booking...'
 
-
-Booking.create!(status: 'Pending',
+Booking.create!(status: 'pending',
   user: User.find_by(email: 'anniou@gmail.com'),
   trip: Trip.find_by(city: 'Bombay')
   )
 
+Booking.create!(status: 'confirmed',
+  user: User.find_by(email: 'anniou@gmail.com'),
+  trip: Trip.find_by(city: 'Paris')
+  )
 
-Booking.create!(status: 'Pending',
+5.times {
+  Booking.create!(status: rand(0..1) == 0 ? 'pending' : 'confirmed',
+    user: User.first,
+    trip: Trip.first
+
+Booking.create!(status: 'pending',
   user: User.find_by(email: 'etienne@gmail.com'),
   trip: Trip.find_by(city: 'Marseille')
   )
 
 
-Booking.create!(status: 'Pending',
+Booking.create!(status: 'pending',
   user: User.find_by(email: 'etienne@gmail.com'),
   trip: Trip.find_by(city: 'Paris')
   )
 
-Booking.create!(status: 'Confirmed',
+Booking.create!(status: 'confirmed',
   user: User.find_by(email: 'arafath@gmail.com'),
   trip: Trip.find_by(city: 'London')
   )
+}
+
 # Booking.create!(bookings_attributes)
 
 puts 'Finished'
