@@ -1,19 +1,20 @@
-Trips#Index
 
-<% @trips.each do |trip| %>
-  <p><%= trip.city %></p>
-  <p><<%= trip.start_date %></p>
-  <p><%= trip.end_date %></p>
-  <p><%= trip.start_city %></p>
-  <p><%= trip.end_city %></p>
-  <p><%= trip.jet_id %></p>
-  <p><%= trip.price %></p>
-  <p><%= trip.jet_name %></p>
-  <p><%= trip.jet_model %></p>
-  <p><%= trip.jet_seats %></p>
-  <p><%= trip.jet_description %></p>
-  <p><%= trip.user_id %></p>
-<%= link_to 'View details', trip_path(trip), class: 'btn btn-success' %>
-<%end %>
-
+<div class="container mt-3">
+  <p>Trips#index</p>
+  <h1>Voyagé en Jet Privé avec Jetsetter</h1>
+  <div class="card-container">
+    <% @trips.each do |trip| %>
+      <div class="card-product">
+          <%= image_tag "jetplane.png" %>
+        <div class="card-product-infos">
+          <h2><%= trip.jet_name %></h2>
+          <p>Du <%= trip.start_date %> Au <%= trip.end_date %></p>
+          <p>De <%= trip.start_city %> À <%= trip.end_city %></p>
+          <p class="card-price"><%= trip.price %> € HT</p>
+          <%= link_to 'Voir offre', trip_path(trip), class: 'btn btn-ghost' %>
+        </div>
+      </div>
+    <%end %>
+  </div>
+</div>
 
