@@ -1,18 +1,25 @@
-TripsController#New
+<div class="container mt-5">
+<p>TripsController#New</p>
+    <div class="form-group-new">
+        <%= simple_form_for @trip do |f| %>
+          <%= f.input :start_date, label: 'Date de départ'%>
+          <%= f.input :end_date, label: 'Date de fin' %>
+          <%= f.input :start_city, label: 'Ville de départ' %>
+          <%= f.input :end_city, label: 'Ville de darrivé' %>
+          <%= f.input :price, label: 'Prix du vol' %>
+          <%= f.input :jet_name, label: 'Nom de votre jet' %>
+          <%= f.input :jet_model, label: 'le model de votre jet' %>
+          <%= f.input :jet_seats, label: 'Combien de places disponibles' %>
+          <%= f.input :jet_description, label: 'Une description pour le vol' %>
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Ajouter une image pour votre vol</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+          </form>
+          <%= f.submit "add a trip", class: "btn btn-ghost-confirmed" %>
+        <% end %>
+    </div>
+</div>
 
 
-<%= simple_form_for @trip do |f| %>
-  <%= f.input :city  %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.input :start_city %>
-  <%= f.input :end_city %>
-  <%= f.input :price %>
-  <%= f.input :jet_name %>
-  <%= f.input :jet_model %>
-  <%= f.input :jet_seats %>
-  <%= f.input :jet_description %>
-  <%= f.submit "add a trip", class: "btn btn-primary" %>
-<% end %>
-
-<%= link_to 'Back', trips_path, class:"btn btn-warning" %>

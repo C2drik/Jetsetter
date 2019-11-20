@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
+Booking.destroy_all
 Trip.destroy_all
 User.destroy_all
 
@@ -57,7 +58,7 @@ trips_attributes = [
     user_id: "43",
     jet_seats: 5,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user_id: 15
+    user: User.find_by(email: 'etienne@gmail.com')
 
   },
   {
@@ -73,7 +74,7 @@ trips_attributes = [
     user_id: "42",
     jet_seats: 10,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user_id: 15
+    user: User.find_by(email: 'etienne@gmail.com')
   },
 
  {
@@ -89,7 +90,7 @@ trips_attributes = [
     user_id: "42",
     jet_seats: 20,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user_id: 15
+    user: User.find_by(email: 'etienne@gmail.com')
 
   },
   {
@@ -105,7 +106,7 @@ trips_attributes = [
     user_id: "44",
     jet_seats: 20,
     jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user_id: 15
+    user: User.find_by(email: 'etienne@gmail.com')
 
   }
 
@@ -129,6 +130,11 @@ bookings_attributes = [
 
 ]
 
-Booking.create!(bookings_attributes)
+Booking.create!(status: 'pending',
+  user: User.find_by(email: 'anniou@gmail.com'),
+  trip: Trip.find_by(city: 'Bombay')
+  )
+
+# Booking.create!(bookings_attributes)
 
 puts 'Finished'

@@ -1,11 +1,20 @@
+
 <h1>Bookings#new</h1>
-
-<h4>Votre voyage a bien été validé</h4>
-<%= render "form" %>
-<p>Voici le récapitulatif de votre voyage</p>
-<p><%= @trip.start_city %></p>
-<p><%= @trip.end_city %></p>
-<p><%= @trip.price %></p>
-
-<%= link_to 'See all trips', trips_path, class: 'btn btn-success' %>
-
+ <div class="container mt-5">
+    <p>Bookings#new</p>
+    <h1 class="text-center">Votre voyage a bien été validé</h1>
+    <br>
+    <p class="text-center">Voici le récapitulatif de votre voyage</p>
+  <div class="card-container-2">
+    <div class="card u-clearfix">
+      <div class="card-body">
+        <span class="card-number card-circle subtle">01</span>
+        <span class="card-author subtle"> </span>
+        <h2 class="card-title">Félicitation !</h2>
+        <span class="card-description subtle"><p>Profitez de votre séjour abord du <%= @trip.jet_name %> avec Jetsetter, ne pas oublier de lire les conditions générales de ventes. Un email de confirmation vous a été envoyé, Veuillez suivre les instructions</p></span>
+       <div><%= link_to 'Revenir en arrière', trips_path, id: 'btn-navbar' %></div>
+      </div>
+    </div>
+    <div class="card-shadow"></div>
+  </div>
+</div>

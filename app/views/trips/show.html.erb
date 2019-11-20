@@ -1,20 +1,84 @@
-TripsController#Show
-
-<h2><%= @trip.start_date %></h2>
-<p><%= @trip.city %></p>
-<p><%= @trip.end_city %></p>
-
-<%= link_to 'Book now', trip_bookings_path(@trip), method: :post, class: 'btn btn-success'  %>
-<%= link_to 'Edit', edit_trip_path(@trip), class: 'btn btn-success' %>
-
-<%= link_to 'Back', trips_path, class: 'btn btn-success' %>
 
 
-<h2>Bookins</h2>
+<div class="container mt-5">
+  <p>TripsController#Show</p>
+  <h1 class="text-center font-weight-light">Coordonnées du vol </h1>
+        <div class="row">
+      <div class="contenido">
+        <div class="ticket">
+          <div class="hqr">
+            <div class="column left-one"></div>
+            <div class="column center">
+              <div id="qrcode"></div>
+            </div>
+            <div class="column right-one"></div>
+          </div>
+          </div>
+          <div class="details">
+            <div class="masinfo">
+              <div class="left">
+               <div class="tinfo">
+              Départ
+            </div>
+            <div class="tdata nesp">
+              <%= @trip.start_city %>
+            </div>
+              </div>
+              <div class="right">
+              <div class="tinfo">
+              destination
+            </div>
+            <div class="tdata nesp">
+              <%= @trip.end_city %>
+            </div>
+              </div>
+            </div>
 
-<% @trip.bookings.each do |booking| %>
-<div class="booking">
-  <p>status: <%= booking.status %>, user: <%= booking.user.email %>, city: <%= booking.trip.city %></p>
+            <div class="tinfo">
+              Jet name
+            </div>
+            <div class="tdata">
+              <%= @trip.jet_name %>
+            </div>
+            <div class="tinfo">
+              Jet model
+            </div>
+            <div class="tdata">
+              <%= @trip.jet_model %>
+            </div>
+            <div class="tinfo">
+              Prix
+            </div>
+            <div class="tdata">
+              <%= @trip.price %> € HT
+            </div>
+            <div class="masinfo">
+              <div class="left">
+               <div class="tinfo">
+                date start
+              </div>
+            <div class="tdata nesp">
+              <%= @trip.start_date %>
+            </div>
+              </div>
+              <div class="right">
+              <div class="tinfo">
+              date end
+            </div>
+            <div class="tdata nesp">
+              <%= @trip.end_date %>
+            </div>
+              </div>
+            </div>
+
+            <div class="link">
+              <%= link_to 'Réserver', new_trip_booking_path(@trip), method: :post, class: 'btn btn-ghost' %>
+              <%= link_to 'Edit', edit_trip_path(@trip), class: 'btn btn-success' %>
+            </div>
+          </div>
+        </div>
+      </div>
+
 </div>
 
-<% end %>
+
