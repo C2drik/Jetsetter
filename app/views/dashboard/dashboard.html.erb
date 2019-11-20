@@ -1,0 +1,8 @@
+<h1>Your bookings</h1>
+
+<ul>
+<% @bookings.each do |b| %>
+<li><%= b.status %><%= b.user_id %><%= b.trip_id  %></li>
+<% end %>
+</ul>
+
