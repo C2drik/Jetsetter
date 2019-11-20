@@ -28,7 +28,7 @@ class TripsController < ApplicationController
   def update
     @trip.update(trip_params)
     redirect_to trip_path(@trip)
->>>>>>> master
+
   end
 
   def destroy
