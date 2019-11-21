@@ -6,6 +6,7 @@ class TripsController < ApplicationController
 
     if query.present?
       @trips = Trip.where('start_city ILIKE ?', query)
+      @trips += Trip.where('end_city ILIKE ?', query)
     else
       @trips = Trip.all
     end
