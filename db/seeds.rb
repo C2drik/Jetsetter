@@ -22,106 +22,125 @@ puts 'Creating users...'
 
 users_attributes = [
   {
-
   email: 'anniou@gmail.com',
   password: '123456'
 
   },
 
  {
-
   email: 'etienne@gmail.com',
   password: '123456'
-  },
-
-  {
-
-  email: 'arafath@gmail.com',
-  password: '123455'
-  },
-
-  {
-
-  email: 'cédrik@gmail.com',
-  password: '123456'
   }
-
 ]
+
 User.create!(users_attributes)
 
-puts 'Creating trip...'
+puts 'Creating trips...'
 
 trips_attributes = [
-  {
-    city:      'Bombay',
-    start_date: 'Mardi 16 novembre 2019',
-    end_date: 'JeuUser.create!(users_attributes)di 25 novembre 2019',
-    start_city: 'London',
-    end_city: 'Paris',
-    duration: '1h00',
-    jet_id: 1,
-    price:        5,
-    jet_name:         'Dishoom',
-    jet_model: 'Falcon',
-    user_id: "43",
-    jet_seats: 5,
-    jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user: User.find_by(email: 'etienne@gmail.com')
 
-  },
-  {
-    city:     'Marseille',
-    start_date: 'Lundi 18 novembre 2019',
-    end_date: 'Mercredi 20 novembre 2019',
-    start_city: 'Bombay',
-    end_city: 'Caracas',
-    duration: '1h00',
-    jet_id: 2,
-    price:        10,
-    jet_name:         'Flora',
-    jet_model: 'Viper',
-    user_id: "42",
-    jet_seats: 10,
-    jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user: User.find_by(email: 'etienne@gmail.com')
-  },
-
- {
-    city:  'London',
-    start_date: 'Jeudi 21 novembre 2019',
-    end_date: 'Lundi 25 novembre 2019',
-    start_city: 'Paris',
-    end_city: 'Panama',
-    duration: '1h00',
-    jet_id: 3,
-    price: 15,
-    jet_name: 'Flights',
-    jet_model: 'Flexjet',
-    user_id: "42",
-    jet_seats: 20,
-    jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user: User.find_by(email: 'etienne@gmail.com')
-
-  },
-  {
+{
     city: 'Paris',
-    start_date: 'Mardi 26 novembre 2019',
-    end_date: 'Vendredi 29 novembre 2019',
+    start_date: '23th november 2019',
+    end_date: '23th november 2019',
     start_city: 'Paris',
     end_city: 'London',
-    duration: '2h00',
-    jet_id: 4,
-    price:        10,
-    jet_name:         'Plane',
-    jet_model: 'Easyjet',
+    jet_id: 1,
+    price:  4.500,
+    jet_name:  'CESSNA',
+    jet_model: 'AMP',
     user_id: "44",
-    jet_seats: 20,
-    jet_description:  'Buzzy destination for Indian street food in Bombay-style vintage decor.',
-    user: User.find_by(email: 'arafath@gmail.com')
+    jet_seats: 12,
+    jet_description:  'The Cessna (12 seater, range: 2,235 km) is extremely well-designed lightweight jet.',
+    user: User.find_by(email: 'anniou@gmail.com')
+
+  },
+
+  {
+    city: 'Dublin',
+    start_date: '24th november 2019',
+    end_date: '24th november 2019',
+    start_city: 'Paris',
+    end_city: 'Dublin',
+    jet_id: 2,
+    price:  6.000,
+    jet_name:  'BOMBER',
+    jet_model: 'XERT',
+    user_id: "44",
+    jet_seats: 5,
+    jet_description:  'The Bombardier range of jets includes different types of aircraft, including a very long range jet range called Global Express',
+    user: User.find_by(email: 'anniou@gmail.com')
+
+  },
+
+    city: 'Amsterdam',
+    start_date: '24th november 2019',
+    end_date: '24th november 2019',
+    start_city: 'London',
+    end_city: 'Amsterdam',
+    jet_id: 3,
+    price:  7.500,
+    jet_name:  'GLOBAL',
+    jet_model: 'PIKT',
+    user_id: "44",
+    jet_seats: 8,
+    jet_description:  'Global Aerospace is the third largest aircraft manufacturer in the world after Airbus and Boeing',
+    user: User.find_by(email: 'etienne@gmail.com')
+
+  },
+
+{
+    city: 'Bruges',
+    start_date: '26th november 2019',
+    end_date: '26th november 2019',
+    start_city: 'Manchester',
+    end_city: 'Bruges',
+    jet_id: 4,
+    price:  10.000,
+    jet_name:  'EMBRAER',
+    jet_model: 'CROE',
+    user_id: "44",
+    jet_seats: 5,
+    jet_description:  'Global Aerospace is the third largest aircraft manufacturer in the world after Airbus and Boeing',
+    user: User.find_by(email: 'etienne@gmail.com')
+
+  },
+
+  {
+    city: 'Madrid',
+    start_date: '27th november 2019',
+    end_date: '27th november 2019',
+    start_city: 'Lisbonne',
+    end_city: 'Madrid',
+    jet_id: 5,
+    price:  2.500,
+    jet_name:  'LEGACY',
+    jet_model: 'KLIE',
+    user_id: "44",
+    jet_seats: 6,
+    jet_description:  'Highly regarded in the ultra-light jets segment, the Phenom 100 (4 seats, range: 1,996 km) offers a bit more space and refinement.',
+    user: User.find_by(email: 'anniou@gmail.com')
+
+  },
+
+  {
+    city: 'Berlin',
+    start_date: '27th november 2019',
+    end_date: '27th november 2019',
+    start_city: 'Barcelona',
+    end_city: 'Berlin',
+    jet_id: 6,
+    price:  5.250,
+    jet_name:  'GULFSTREAM',
+    jet_model: 'HASQ',
+    user_id: "44",
+    jet_seats: 15,
+    jet_description:  'The GULFSTREAM currently holds the record for speed and range of private aviation.',
+    user: User.find_by(email: 'anniou@gmail.com')
 
   }
-
 ]
+## booking create
 
 Trip.create!(trips_attributes)
 
@@ -129,34 +148,33 @@ puts 'Creating booking...'
 
 Booking.create!(status: 'pending',
   user: User.find_by(email: 'anniou@gmail.com'),
-  trip: Trip.find_by(city: 'Bombay')
+  trip: Trip.find_by(city: 'Paris')
   )
 
 Booking.create!(status: 'confirmed',
   user: User.find_by(email: 'anniou@gmail.com'),
-  trip: Trip.find_by(city: 'Paris')
+  trip: Trip.find_by(city: 'Dublin')
   )
 
-5.times {
-  Booking.create!(status: rand(0..1) == 0 ? 'pending' : 'confirmed',
-    user: User.first,
-    trip: Trip.first
-
 Booking.create!(status: 'pending',
-  user: User.find_by(email: 'etienne@gmail.com'),
-  trip: Trip.find_by(city: 'Marseille')
+  user: User.find_by(email: 'anniou@gmail.com'),
+  trip: Trip.find_by(city: 'Amsterdam')
   )
 
 Booking.create!(status: 'pending',
   user: User.find_by(email: 'etienne@gmail.com'),
-  trip: Trip.find_by(city: 'Paris')
+  trip: Trip.find_by(city: 'Bruges')
   )
 
 Booking.create!(status: 'confirmed',
-  user: User.find_by(email: 'arafath@gmail.com'),
-  trip: Trip.find_by(city: 'London')
+  user: User.find_by(email: 'etienne@gmail.com'),
+  trip: Trip.find_by(city: 'Madrid')
   )
 
-# Booking.create!(bookings_attributes)
+Booking.create!(status: 'confirmed',
+  user: User.find_by(email: 'etienne@gmail.com'),
+  trip: Trip.find_by(city: 'Berlin')
+  )
+
 
 puts 'Finished'
