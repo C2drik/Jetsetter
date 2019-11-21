@@ -1,0 +1,19 @@
+Bookings#Show
+
+
+<div class="container mt-5">
+  <h1 class="font-weight-light">Flight details</h1>
+</div>
+
+<div class="itinerary">
+  <h2>ITINERARY</h2>
+  <p><%= @trip.start_city %></p>
+  <p><%= @trip.end_city %></p>
+</div>
+
+
+<%= simple_form_for [@trip, @booking] do |f| %>
+  <%= f.input :review %>
+  <%= f.submit "add a review", class: "btn btn-success" %>
+<% end %>
+

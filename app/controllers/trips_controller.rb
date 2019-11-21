@@ -40,6 +40,6 @@ class TripsController < ApplicationController
   end
 
   def trip_params
-    params.require(:trip).permit(:city, :start_date, :end_date, :start_city, :end_city, :jet_id, :price, :jet_name, :jet_model, :jet_seats, :jet_description, :photo)
+    params.require(:trip).permit(:city, :start_date, :end_date, :start_city, :end_city, :jet_id, :price, :jet_name, :jet_model, :jet_seats, :jet_description, :photo, :duration)
   end
 end
