@@ -23,7 +23,7 @@
 
             <div class="left">
               <div class="tinfo">
-                Départ
+                Departure
               </div>
 
               <div class="tdata nesp">
@@ -41,30 +41,6 @@
               </div>
             </div>
 
-          </div>
-
-          <div class="tinfo">
-            Jet name
-          </div>
-
-          <div class="tdata">
-            <%= @trip.jet_name %>
-          </div>
-
-          <div class="tinfo">
-            Jet model
-          </div>
-
-          <div class="tdata">
-            <%= @trip.jet_model %>
-          </div>
-
-          <div class="tinfo">
-            Prix
-          </div>
-
-          <div class="tdata">
-            <%= @trip.price %> €
           </div>
 
           <div class="masinfo">
@@ -87,6 +63,32 @@
               </div>
             </div>
           </div>
+
+          <div class="tinfo">
+            Price
+          </div>
+
+          <div class="tdata">
+            <%= @trip.price %> €
+          </div>
+
+          <div class="tinfo">
+            Jet model
+          </div>
+
+          <div class="tdata">
+            <%= @trip.jet_model %>
+          </div>
+
+
+          <div class="tinfo">
+              Duration
+          </div>
+
+          <div class="tdata">
+            <%= @trip.duration %>
+          </div>
+
 
           <div class="link">
             <%= link_to 'Réserver', new_trip_booking_path(@trip), method: :get, class: 'btn btn-ghost' %>
