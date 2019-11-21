@@ -1,7 +1,13 @@
-<div class="container mt-3">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "trips_new.jpg", height: 500, width: 1080 %>')">
+  <div class="container">
+    <h1>Welcome to Jetsetter</h1>
+    <p>Best flight with jet flight</p>
+    <a class="btn btn-flat" href="#"></a>
+  </div>
+</div>
 <!--   <p>Trips#index</p> -->
-  <h1>Voyager en Jet Privé avec Jetsetter</h1>
-  <div class="card-container">
+  <h1 class="text-center">Voyager en Jet Privé avec Jetsetter</h1>
+<!--   <div class="card-container">
     <% @trips.each do |trip| %>
       <div class="card-product">
 
@@ -13,6 +19,22 @@
         </div>
       </div>
     <%end %>
-  </div>
-</div>
+  </div> -->
 
+  <div class="container-card mb-5">
+    <% @trips.each do |trip| %>
+      <%= link_to trip_path(trip) do %>
+          <div class="mycard">
+            <div class="card mb-3">
+              <img src="http://placehold.it/50x50" alt="" class="avatar card-user">
+              <span class="card-category"><p><%= trip.jet_name %></p></span>
+              <div class="card-description">
+                <h3>Stripe</h3>
+                <p><%= trip.start_city %> -> <%= trip.end_city %> | <%= trip.duration %> H</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+      <%end %>
+    <% end %>
+  </div>
