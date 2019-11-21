@@ -134,13 +134,11 @@ Booking.create!(status: 'confirmed',
   Booking.create!(status: rand(0..1) == 0 ? 'pending' : 'confirmed',
     user: User.first,
     trip: Trip.first
-    )
 
 Booking.create!(status: 'pending',
   user: User.find_by(email: 'etienne@gmail.com'),
   trip: Trip.find_by(city: 'Marseille')
   )
-
 
 Booking.create!(status: 'pending',
   user: User.find_by(email: 'etienne@gmail.com'),
@@ -151,7 +149,6 @@ Booking.create!(status: 'confirmed',
   user: User.find_by(email: 'arafath@gmail.com'),
   trip: Trip.find_by(city: 'London')
   )
-}
 
 # Booking.create!(bookings_attributes)
 
