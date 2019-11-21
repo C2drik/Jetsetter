@@ -2,7 +2,7 @@
 
 <div class="container mt-5">
 
-  <p>TripsController#Show</p>
+<!--   <p>TripsController#Show</p> -->
 
   <h1 class="text-center font-weight-light">Coordonnées du vol </h1>
 
@@ -91,9 +91,9 @@
           <div class="link">
             <%= link_to 'Réserver', new_trip_booking_path(@trip), method: :get, class: 'btn btn-ghost' %>
           </div>
-
       </div>
     </div>
   </div>
 </div>
+  <%= cl_image_tag @trip.photo.key, height: 300, width: 400, crop: :fill %>
 

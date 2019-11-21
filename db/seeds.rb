@@ -5,6 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+file = URI.open('https://res.cloudinary.com/anniou/image/upload/v1574330792/nqeiqrkrwl2n18flljpa.jpg')
+trip = Article.new(title: 'NES', body: "A great console")
+trip.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
+# Here we write article.photo.attach(...) because we wrote has_one_attached :photo in app/models article.rb
+trip.save
+
+
 
 puts 'Cleaning database...'
 Booking.destroy_all
