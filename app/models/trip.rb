@@ -7,5 +7,6 @@ class Trip < ApplicationRecord
   validates :end_city, presence: true
   validates :jet_name, presence: true
   validates :price, presence: true
+  validates :duration, presence: true
 
 end
