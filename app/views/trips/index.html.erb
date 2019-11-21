@@ -5,7 +5,8 @@
   <div class="card-container">
     <% @trips.each do |trip| %>
       <div class="card-product">
-          <%= image_tag "jetplane.png" %>
+          <%= cl_image_tag("nqeiqrkrwl2n18flljpa",
+      width: 400, height: 300, crop: :fill) %>
         <div class="card-product-infos">
           <h2><%= trip.jet_name %></h2>
           <p>Du <%= trip.start_date.strftime("%d/%m/%Y") %> Au <%= trip.end_date.strftime("%d/%m/%Y") %></p>
