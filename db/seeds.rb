@@ -58,6 +58,7 @@ trips_attributes = [
     end_date: 'JeuUser.create!(users_attributes)di 25 novembre 2019',
     start_city: 'London',
     end_city: 'Paris',
+    duration: '1h00',
     jet_id: 1,
     price:        5,
     jet_name:         'Dishoom',
@@ -74,6 +75,7 @@ trips_attributes = [
     end_date: 'Mercredi 20 novembre 2019',
     start_city: 'Bombay',
     end_city: 'Caracas',
+    duration: '1h00',
     jet_id: 2,
     price:        10,
     jet_name:         'Flora',
@@ -90,6 +92,7 @@ trips_attributes = [
     end_date: 'Lundi 25 novembre 2019',
     start_city: 'Paris',
     end_city: 'Panama',
+    duration: '1h00',
     jet_id: 3,
     price: 15,
     jet_name: 'Flights',
@@ -106,6 +109,7 @@ trips_attributes = [
     end_date: 'Vendredi 29 novembre 2019',
     start_city: 'Paris',
     end_city: 'London',
+    duration: '2h00',
     jet_id: 4,
     price:        10,
     jet_name:         'Plane',
@@ -137,8 +141,6 @@ Booking.create!(status: 'confirmed',
   Booking.create!(status: rand(0..1) == 0 ? 'pending' : 'confirmed',
     user: User.first,
     trip: Trip.first
-  )
-}
 
 Booking.create!(status: 'pending',
   user: User.find_by(email: 'etienne@gmail.com'),

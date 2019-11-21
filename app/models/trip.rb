@@ -7,4 +7,5 @@ class Trip < ApplicationRecord
   validates :jet_name, presence: true
   validates :price, presence: true
   has_one_attached :photo
+  validates :duration, presence: true
 end
