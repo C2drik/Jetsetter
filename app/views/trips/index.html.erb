@@ -5,7 +5,7 @@
   <div class="card-container">
     <% @trips.each do |trip| %>
       <div class="card-product">
-          <%= image_tag "jetplane.png" %>
+
         <div class="card-product-infos">
           <h2><%= trip.start_city %> -> <%= trip.end_city %></h2>
           <p><%= trip.start_date.strftime("%d/%m/%Y") %> - <%= trip.end_date.strftime("%d/%m/%Y") %></p>

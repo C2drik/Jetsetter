@@ -1,12 +1,23 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path url_for(@trip.photo), height: 400, width: 1080 %>')">
+  <div class="container">
+    <h1></h1>
+    <p></p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+<img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
 
 
 <div class="container mt-5">
+  <h1 class="font-weight-light">Flight details</h1>
 
-  <p>TripsController#Show</p>
-
-  <h1 class="text-center font-weight-light">Coordonnées du vol </h1>
-
-    <div class="row">
+<div class="itinerary">
+  <h2>ITINERARY</h2>
+  <p><%= @trip.start_city %></p>
+  <p><%= @trip.end_city %></p>
+</div>
+<!--     <div class="row">
       <div class="contenido">
         <div class="ticket">
           <div class="hqr">
@@ -94,7 +105,7 @@
             <%= link_to 'Réserver', new_trip_booking_path(@trip), method: :get, class: 'btn btn-ghost' %>
           </div>
 
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
