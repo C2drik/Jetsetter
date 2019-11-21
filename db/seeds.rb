@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-file = URI.open('https://res.cloudinary.com/anniou/image/upload/v1574330792/nqeiqrkrwl2n18flljpa.jpg')
-trip = Article.new(title: 'NES', body: "A great console")
-trip.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
+# file = URI.open('https://res.cloudinary.com/anniou/image/upload/v1574330792/nqeiqrkrwl2n18flljpa.jpg')
+# trip = Trip.new(title: 'NES', body: "A great console")
+# trip.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
 # Here we write article.photo.attach(...) because we wrote has_one_attached :photo in app/models article.rb
-trip.save
+# trip.save
 
 
 
@@ -72,7 +72,7 @@ trips_attributes = [
     user: User.find_by(email: 'anniou@gmail.com')
 
   },
-
+  {
     city: 'Amsterdam',
     start_date: '24th november 2019',
     end_date: '24th november 2019',
@@ -109,7 +109,7 @@ trips_attributes = [
   {
     city: 'Madrid',
     start_date: '27th november 2019',
-    end_date: '27th november 2019',
+    end_date: '28th november 2019',
     start_city: 'Lisbonne',
     end_city: 'Madrid',
     jet_id: 5,
@@ -126,12 +126,29 @@ trips_attributes = [
   {
     city: 'Berlin',
     start_date: '27th november 2019',
-    end_date: '27th november 2019',
-    start_city: 'Barcelona',
-    end_city: 'Berlin',
+    end_date: '28th november 2019',
+    start_city: 'Berlin',
+    end_city: 'Singapore',
     jet_id: 6,
     price:  5.250,
     jet_name:  'GULFSTREAM',
+    jet_model: 'HASQ',
+    user_id: "44",
+    jet_seats: 15,
+    jet_description:  'The GULFSTREAM currently holds the record for speed and range of private aviation.',
+    user: User.find_by(email: 'anniou@gmail.com')
+
+  },
+
+  {
+    city: 'Berlin',
+    start_date: '29th november 2019',
+    end_date: '30th november 2019',
+    start_city: 'Berlin',
+    end_city: 'Barcelona',
+    jet_id: 7,
+    price:  9.250,
+    jet_name:  'GULFSTREAM 2',
     jet_model: 'HASQ',
     user_id: "44",
     jet_seats: 15,

@@ -1,6 +1,6 @@
 <div class="container mt-3">
   <p>Trips#index</p>
-  <h1>Voyager en Jet Privé avec Jetsetter</h1>
+  <h1>Book private jets with Jetsetter</h1>
   <div class="card-container">
     <% @trips.each do |trip| %>
       <div class="card-product">
@@ -9,7 +9,7 @@
           <h2><%= trip.start_city %> -> <%= trip.end_city %></h2>
           <p><%= trip.start_date.strftime("%d/%m/%Y") %> - <%= trip.end_date.strftime("%d/%m/%Y") %></p>
           <p><%= trip.duration %></p>
-          <%= link_to 'Voir offre', trip_path(trip), class: 'btn btn-ghost' %>
+          <%= link_to 'Flight details', trip_path(trip), class: 'btn btn-ghost' %>
         </div>
       </div>
     <%end %>
