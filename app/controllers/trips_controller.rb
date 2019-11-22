@@ -2,7 +2,14 @@ class TripsController < ApplicationController
   before_action :set_trip, only: [:show, :edit, :update, :photo]
 
   def index
-    @trips = Trip.all
+    query = "%#{params[:query]}"
+
+    if query.present?
+      @trips = Trip.where('start_city ILIKE ?', query)
+      @trips += Trip.where('end_city ILIKE ?', query)
+    else
+      @trips = Trip.all
+    end
   end
 
   def show
