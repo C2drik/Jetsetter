@@ -35,11 +35,6 @@ users_attributes = [
 
 User.create!(users_attributes)
 
-# creer un user
-file = File.open('https://meme.eq8.eu/noidea.jpg')
-user = User.new(email: "john@doe.com", password: "password")
-article.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
-user.save!
 
 puts 'Creating trips...'
 
@@ -68,7 +63,6 @@ trips_attributes = [
     end_date: '24th november 2019',
     start_city: 'Paris',
     end_city: 'Dublin',
-    duration: 1.30,
     jet_id: 2,
     price:  6.000,
     duration: 1.30,
@@ -85,7 +79,6 @@ trips_attributes = [
     end_date: '24th november 2019',
     start_city: 'London',
     end_city: 'Amsterdam',
-    duration: 1,
     jet_id: 3,
     price:  7.500,
     duration: 1,
@@ -103,7 +96,6 @@ trips_attributes = [
     end_date: '26th november 2019',
     start_city: 'Manchester',
     end_city: 'Bruges',
-    duration: 2,
     jet_id: 4,
     price:  10.000,
     duration: 2,
@@ -121,7 +113,6 @@ trips_attributes = [
     end_date: '28th november 2019',
     start_city: 'Lisbonne',
     end_city: 'Madrid',
-    duration: 1,
     jet_id: 5,
     price:  2.500,
     duration: 1,
@@ -139,7 +130,6 @@ trips_attributes = [
     end_date: '27th november 2019',
     start_city: 'Barcelona',
     end_city: 'Berlin',
-    duration: 1.30,
     jet_id: 6,
     price:  5.250,
     duration: 1.30,
