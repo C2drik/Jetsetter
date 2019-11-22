@@ -44,27 +44,36 @@ users_attributes = [
   {
   email: 'paul@gmail.com',
   password: '123456'
-  },
-  {
-  email: 'silvia@gmail.com',
-  password: '123456'
   }
 ]
 
 User.create!(users_attributes)
 file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/tu4sfe6rgefaundyisec.jpg')
-anniou = User.new(
-  email: 'anniou2@gmail.com',
-  password: '123456'
-  )
-anniou.photo.attach(io: file, filename: 'anniou.jpg', content_type: 'image/jpg')
-anniou.save
 
+def put_photo_to_user(user, photo_path)
+  file = URI.open(photo_path)
+  anniou = user
+  anniou.photo.attach(io: file, filename: 'anniou.jpg', content_type: 'image/jpg')
+  anniou.save
+end
 
+# anniou@gmail.com
+put_photo_to_user(User.first, 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/tu4sfe6rgefaundyisec.jpg')
+
+# etienne@gmail.com
+put_photo_to_user(User.second, 'https://avatars0.githubusercontent.com/u/48604969?v=4')
+
+# muriel@gmail.com
+put_photo_to_user(User.third, 'https://avatars2.githubusercontent.com/u/54837955?v=4')
+
+# johanna@gmail.com
+put_photo_to_user(User.fourth, 'https://avatars3.githubusercontent.com/u/55392520?v=4')
+
+# paul@gmail.com
+put_photo_to_user(User.fifth, 'https://avatars3.githubusercontent.com/u/54004476?v=4')
 puts 'Creating trips...'
 
 trips_attributes = [
-
 {
     city: 'Paris',
     start_date: '23th november 2019',
