@@ -5,12 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-#file = URI.open('https://res.cloudinary.com/anniou/image/upload/v1574330792/nqeiqrkrwl2n18flljpa.jpg')
-#trip = Article.new(title: 'NES', body: "A great console")
-#trip.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
-# Here we write article.photo.attach(...) because we wrote has_one_attached :photo in app/models article.rb
-#trip.save
-
 
 
 puts 'Cleaning database...'
@@ -35,6 +29,12 @@ users_attributes = [
 
 User.create!(users_attributes)
 
+# creer un user
+file = File.open('https://meme.eq8.eu/noidea.jpg')
+user = User.new(email: "john@doe.com", password: "password")
+article.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
+user.save!
+
 puts 'Creating trips...'
 
 trips_attributes = [
@@ -54,7 +54,6 @@ trips_attributes = [
     jet_seats: 12,
     jet_description:  'The Cessna (12 seater, range: 2,235 km) is extremely well-designed lightweight jet.',
     user: User.find_by(email: 'anniou@gmail.com')
-
   },
 
   {
@@ -63,6 +62,7 @@ trips_attributes = [
     end_date: '24th november 2019',
     start_city: 'Paris',
     end_city: 'Dublin',
+    duration: 1.30,
     jet_id: 2,
     price:  6.000,
     duration: 1.30,
@@ -72,7 +72,6 @@ trips_attributes = [
     jet_seats: 5,
     jet_description:  'The Bombardier range of jets includes different types of aircraft, including a very long range jet range called Global Express',
     user: User.find_by(email: 'anniou@gmail.com')
-
   },
   {
     city: 'Amsterdam',
@@ -80,6 +79,7 @@ trips_attributes = [
     end_date: '24th november 2019',
     start_city: 'London',
     end_city: 'Amsterdam',
+    duration: 1,
     jet_id: 3,
     price:  7.500,
     duration: 1,
@@ -89,15 +89,15 @@ trips_attributes = [
     jet_seats: 8,
     jet_description:  'Global Aerospace is the third largest aircraft manufacturer in the world after Airbus and Boeing',
     user: User.find_by(email: 'etienne@gmail.com')
-
   },
 
-{
+  {
     city: 'Bruges',
     start_date: '26th november 2019',
     end_date: '26th november 2019',
     start_city: 'Manchester',
     end_city: 'Bruges',
+    duration: 2,
     jet_id: 4,
     price:  10.000,
     duration: 2,
@@ -107,7 +107,6 @@ trips_attributes = [
     jet_seats: 5,
     jet_description:  'Global Aerospace is the third largest aircraft manufacturer in the world after Airbus and Boeing',
     user: User.find_by(email: 'etienne@gmail.com')
-
   },
 
   {
@@ -116,6 +115,7 @@ trips_attributes = [
     end_date: '27th november 2019',
     start_city: 'Lisbonne',
     end_city: 'Madrid',
+    duration: 1,
     jet_id: 5,
     price:  2.500,
     duration: 1,
@@ -125,7 +125,6 @@ trips_attributes = [
     jet_seats: 6,
     jet_description:  'Highly regarded in the ultra-light jets segment, the Phenom 100 (4 seats, range: 1,996 km) offers a bit more space and refinement.',
     user: User.find_by(email: 'anniou@gmail.com')
-
   },
 
   {
@@ -134,6 +133,7 @@ trips_attributes = [
     end_date: '27th november 2019',
     start_city: 'Barcelona',
     end_city: 'Berlin',
+    duration: 1.30,
     jet_id: 6,
     price:  5.250,
     duration: 1.30,
@@ -143,7 +143,6 @@ trips_attributes = [
     jet_seats: 15,
     jet_description:  'The GULFSTREAM currently holds the record for speed and range of private aviation.',
     user: User.find_by(email: 'anniou@gmail.com')
-
   }
 ]
 ## booking create

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:index, :show]
 
     get '/dashboard', to: 'dashboard#show'
+
   end

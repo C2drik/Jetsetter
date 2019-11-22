@@ -45,3 +45,13 @@
     margin-top: 15px;
     margin-right: 10px;
 }
+
+#trip_photo > input {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+}

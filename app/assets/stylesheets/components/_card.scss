@@ -1,61 +1,115 @@
-.card-container {
+// .card-container {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   margin-bottom: 20px;
+// }
+
+// .card-product img {
+//   height: 100%;
+//   width: 217px;
+//   object-fit: cover;
+// }
+
+// .card-product {
+//   overflow: hidden;
+//   height: 200px;
+//   width: 420px;
+//   margin: 8px;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   display: flex;
+//   align-items: center;
+//   border-radius: 5px;
+
+// }
+
+
+// .card-product h2 {
+//   font-size: 20px;
+//   font-weight: bold;
+//   margin: 0;
+//   font-family: 'Merriweather', serif;
+//   color: #DBBC90;
+// }
+
+// .card-product p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+// }
+
+// .card-product .card-product-infos {
+//   padding: 16px;
+// }
+
+// .btn {
+//   margin-top: 10px;
+// }
+
+// .card-product-infos .card-price {
+//   font-size: 32px;
+// }
+
+// h1 {
+//   font-size: 33px;
+//   font-family: 'Merriweather', serif;
+//   color: black;
+//   margin-bottom: 20px;
+// }
+
+.container-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: left;
   margin-bottom: 20px;
-}
-
-.card-product img {
-  height: 100%;
-  width: 217px;
-  object-fit: cover;
-}
-
-.card-product {
-  overflow: hidden;
-  height: 200px;
-  width: 420px;
-  margin: 8px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-
+  padding: 20px;
+  margin: 0px 127px;
 }
 
 
-.card-product h2 {
+.card {
+  position: relative;
+  height: 175px;
+  background: linear-gradient(-225deg, rgba(30,30,30,0.6) 30%, rgba(46,46,46,0.5) 80%), url("<%= image_path url_for(@trip.photo), height: 400, width: 400 %>");
+  background-size: cover;
+  color: white;
+
+}
+
+.card-user {
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card.img{
+  border-radius: 50%;
+}
+
+.mycard {
+  width: 400px;
+  margin-right: 15px;
+}
+
+.card-category p {
   font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  font-family: 'Merriweather', serif;
-  color: #DBBC90;
+  font-family: 'Merriweather', sans-serif;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-}
-
-.btn {
-  margin-top: 10px;
-}
-
-.card-product-infos .card-price {
-  font-size: 32px;
-}
-
-h1 {
-  font-size: 33px;
-  font-family: 'Merriweather', serif;
-  color: black;
-  margin-bottom: 20px;
+.card-description p {
+  font-size: 14px;
 }
