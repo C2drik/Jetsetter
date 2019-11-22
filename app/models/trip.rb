@@ -6,6 +6,13 @@ class Trip < ApplicationRecord
   validates :end_city, presence: true
   validates :jet_name, presence: true
   validates :price, presence: true
+
+
+  before_save :geocode_bookings
+
+  def geocode_bookings
+    bookings.each(&:geocode_endpoints) if bookings.any?
+  end
   has_one_attached :photo
   validates :duration, presence: true
 end
