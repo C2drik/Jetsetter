@@ -1,20 +1,51 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "trips_new.jpg", height: 500, width: 1080 %>')">
+  <div class="container">
+    <h1>Welcome to Jetsetter</h1>
+    <p>Best flight with jet flight</p>
+    <a class="btn btn-flat" href="#"></a>
+  </div>
+</div>
+<!--   <p>Trips#index</p> -->
+  <h1 class="text-center m-5">Voyager en Jet Privé avec Jetsetter</h1>
 
-<div class="container mt-3">
-  <p>Trips#index</p>
-  <h1>Voyager en Jet Privé avec Jetsetter</h1>
-  <div class="card-container">
-    <% @trips.each do |trip| %>
-      <div class="card-product">
-          <%= image_tag "jetplane.png" %>
-        <div class="card-product-infos">
-          <h2><%= trip.jet_name %></h2>
-          <p>Du <%= trip.start_date.strftime("%d/%m/%Y") %> Au <%= trip.end_date.strftime("%d/%m/%Y") %></p>
-          <p><%= trip.start_city %> -> <%= trip.end_city %></p>
-          <p class="card-price"><%= trip.price %> € HT</p>
-          <%= link_to 'Voir offre', trip_path(trip), class: 'btn btn-ghost' %>
-        </div>
-      </div>
-    <%end %>
+<div class="container">
+      <h3 class="text-center m-5">Comment ça marche ?</h3>
+  <div class="row m-3">
+    <div class="col-lg-4">
+      <p><i class="fas fa-circle text-center" style="font-size: 10em;"></i></p>
+      <h2>1 - Réserver</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="col-lg-4">
+      <p><i class="fas fa-circle" style="font-size: 10em;"></i></p>
+      <h2>2 - Réserver</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="col-lg-4">
+      <p><i class="fas fa-circle" style="font-size: 10em;"></i></p>
+      <h2>3 - Réserver</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
   </div>
 </div>
 
+<hr class="featurette-divider m-5">
+
+<h1 class="text-center m-5">Nos vols disponibles</h1>
+  <div class="container-card mb-5">
+    <% @trips.each do |trip| %>
+      <%= link_to trip_path(trip) do %>
+          <div class="mycard">
+            <div class="card mb-3">
+              <img src="http://placehold.it/50x50" alt="" class="avatar card-user">
+              <span class="card-category"><p><%= trip.jet_name %></p></span>
+              <div class="card-description">
+                <h3><%= trip.city %></h3>
+                <p><%= trip.start_city %> -> <%= trip.end_city %> | <%= trip.duration %> H</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+      <%end %>
+    <% end %>
+  </div>

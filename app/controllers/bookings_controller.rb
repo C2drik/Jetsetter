@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def show
     @trip = Trip.find(params[:trip_id])
     @booking = Booking.find(params[:id])
@@ -30,5 +31,15 @@ class BookingsController < ApplicationController
     else
       render "trips/show"
     end
+  end
+
+  # def edit
+  #   @trip = Trip.find(params[:trip_id])
+  # end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(review: params[:booking][:review])
+    redirect_to dashboard_path
   end
 end
