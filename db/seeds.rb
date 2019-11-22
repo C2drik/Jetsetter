@@ -11,6 +11,11 @@
 # trip.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
 # Here we write article.photo.attach(...) because we wrote has_one_attached :photo in app/models article.rb
 # trip.save
+require 'open-uri'
+
+
+
+
 
 
 puts 'Cleaning database...'
@@ -19,23 +24,67 @@ Trip.destroy_all
 User.destroy_all
 
 puts 'Creating users...'
-
 users_attributes = [
   {
   email: 'anniou@gmail.com',
   password: '123456'
-
   },
-
- {
+  {
   email: 'etienne@gmail.com',
+  password: '123456'
+  },
+  {
+  email: 'muriel@gmail.com',
+  password: '123456'
+  },
+  {
+  email: 'johanna@gmail.com',
+  password: '123456'
+  },
+  {
+  email: 'paul@gmail.com',
+  password: '123456'
+  },
+  {
+  email: 'silvia@gmail.com',
   password: '123456'
   }
 ]
 
 User.create!(users_attributes)
+file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/tu4sfe6rgefaundyisec.jpg')
+anniou = User.new(
+  email: 'anniou@gmail.com',
+  password: '123456'
+  ),
+file = URI.open('https://avatars2.githubusercontent.com/u/54837955?v=4')
+muriel = User.new(
+  email: 'muriel@gmail.com',
+  password: '123456'
+  ),
+file = URI.open('https://avatars3.githubusercontent.com/u/55392520?v=4')
+johanna = User.new(
+  email: 'johanna@gmail.com',
+  password: '123456'
+  ),
+file = URI.open('https://avatars3.githubusercontent.com/u/54004476?v=4')
+paul = User.new(
+  email: 'paul@gmail.com',
+  password: '123456'
+  ),
+file = URI.open('https://avatars3.githubusercontent.com/u/35662842?v=4')
+silvia = User.new(
+  email: 'silvia@gmail.com',
+  password: '123456'
+  )
 
-# creer un user
+# anniou.photo.attach(io: file, filename: 'anniou.jpg', content_type: 'image/jpg')
+anniou.save
+muriel.save
+johanna.save
+paul.save
+silvia.save
+
 
 puts 'Creating trips...'
 
@@ -64,7 +113,6 @@ trips_attributes = [
     end_date: '24th november 2019',
     start_city: 'Paris',
     end_city: 'Dublin',
-    duration: 1.30,
     jet_id: 2,
     price:  6.000,
     jet_name:  'BOMBER',
@@ -80,7 +128,6 @@ trips_attributes = [
     end_date: '24th november 2019',
     start_city: 'London',
     end_city: 'Amsterdam',
-    duration: 1,
     jet_id: 3,
     price:  7.500,
     jet_name:  'GLOBAL',
@@ -97,7 +144,6 @@ trips_attributes = [
     end_date: '26th november 2019',
     start_city: 'Manchester',
     end_city: 'Bruges',
-    duration: 2,
     jet_id: 4,
     price:  10.000,
     jet_name:  'EMBRAER',
@@ -114,7 +160,6 @@ trips_attributes = [
     end_date: '28th november 2019',
     start_city: 'Lisbonne',
     end_city: 'Madrid',
-    duration: 1,
     jet_id: 5,
     price:  2.500,
     jet_name:  'LEGACY',
@@ -131,7 +176,6 @@ trips_attributes = [
     end_date: '27th november 2019',
     start_city: 'Barcelona',
     end_city: 'Berlin',
-    duration: 1.30,
     jet_id: 6,
     price:  5.250,
     jet_name:  'GULFSTREAM',

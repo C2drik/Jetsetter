@@ -18,3 +18,29 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+// BANNER HOMME ///
+.banner-home {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 710px;
+}
+
+.banner-home h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 5em;
+  font-weight: bold;
+  color: #EDA412;
+
+}
+
+.banner-home p {
+  font-size: 2em;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
