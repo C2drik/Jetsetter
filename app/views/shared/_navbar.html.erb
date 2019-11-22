@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <span class="nav-jetsetter"><%= link_to "Jetsetter", trips_path %></span>
-    <%= form_tag trips_path, class:"form-inline my-2 my-lg-0", method: :get do %>
+  <span class="nav-jetsetter" ><%= link_to "Jetsetter", trips_path %></span>
+    <%= form_tag trips_path, class:"form-inline my-2 my-lg-0", id:"search_field", method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
@@ -18,7 +18,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to '<i class="fas fa-plus"></i> Ajouter un vol'.html_safe, new_trip_path, id: "btn-navbar"%>
+        <%= link_to '<i class="fas fa-plus"></i> Add a trip'.html_safe, new_trip_path, id: "btn-navbar"%>
 
       </li>
       <li class="nav-item dropdown">
