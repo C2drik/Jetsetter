@@ -1,17 +1,25 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "trips_new.jpg", height: 500, width: 1080 %>')">
+  <div class="container">
+    <h1>Describe your flight</h1>
+    <p></p>
+    <a class="btn btn-flat" href="#"></a>
+  </div>
+</div>
 <div class="container mt-5">
 <!-- <p>TripsController#New</p> -->
     <div class="form-group-new">
         <%= simple_form_for @trip do |f| %>
-          <%= f.input :start_date, label: 'Date de départ'%>
-          <%= f.input :end_date, label: 'Date de fin' %>
-          <%= f.input :start_city, label: 'Ville de départ' %>
-          <%= f.input :end_city, label: 'Ville de darrivé' %>
-          <%= f.input :duration, label: 'Durée du vol' %>
-          <%= f.input :price, label: 'Prix du vol' %>
-          <%= f.input :jet_name, label: 'Nom de votre jet' %>
-          <%= f.input :jet_model, label: 'le model de votre jet' %>
-          <%= f.input :jet_seats, label: 'Combien de places disponibles' %>
-          <%= f.input :jet_description, label: 'Une description pour le vol' %>
+          <%= f.input :start_date, label: 'Start date'%>
+          <%= f.input :end_date, label: 'End date' %>
+          <%= f.input :start_city, label: "", placeholder: "Your start city..." %>
+          <%= f.input :end_city, label: 'Destination city' %>
+          <%= f.input :duration, label: " ", placeholder: "How long does your flight last?..." %>
+          <%= f.input :price, label: "", placeholder: "How much ?..." %>
+          <%= f.input :jet_name, label: "", placeholder: "Your jet name..." %>
+          <%= f.input :jet_model, label: "", placeholder: "Your jet model..."%>
+          <%= f.input :jet_seats, label: "", placeholder: "Your jet seats..." %>
+          <%= f.input :jet_description, label: "", placeholder: "Some description..."%>
+
           <%= f.input :photo, as: :file %>
           <%= f.submit "add a trip", class: "btn btn-ghost-confirmed" %>
         <% end %>

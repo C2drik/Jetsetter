@@ -35,6 +35,12 @@ users_attributes = [
 
 User.create!(users_attributes)
 
+# creer un user
+file = File.open('https://meme.eq8.eu/noidea.jpg')
+user = User.new(email: "john@doe.com", password: "password")
+article.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
+user.save!
+
 puts 'Creating trips...'
 
 trips_attributes = [
