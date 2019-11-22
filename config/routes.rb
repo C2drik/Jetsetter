@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'trips#index'
     resources :trips do
-       resources :bookings, only: [:new, :create, :update, :show]
+       resources :bookings, only: [:show, :new, :create, :update]
+
     end
     resources :bookings, only: [:index, :show]
 

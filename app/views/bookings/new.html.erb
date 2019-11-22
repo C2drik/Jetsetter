@@ -9,11 +9,15 @@
       <div class="card-body">
         <span class="card-number card-circle subtle">01</span>
         <span class="card-author subtle"> </span>
+
         <h2 class="card-title">Congratulations</h2>
         <span class="card-description subtle"><p>Enjoy your trip on board of <%= @trip.jet_name %> with Jetsetter, don't forget to read and accept the terms of use. Please follow the instructions in the confirmation email has been sent.</p></span>
-       <div><%= link_to 'Revenir en arrière', trips_path, id: 'btn-navbar' %></div>
+       <div><%= link_to 'Go back', trips_path, id: 'btn-navbar' %></div>
       </div>
     </div>
     <div class="card-shadow"></div>
+  <div id="map" style="width: 620px; height: 300px;" data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="pk.eyJ1IjoidGl0cyIsImEiOiJjazM4eHMzZ2IwNnBhM2RrcTRqcXNsemMzIn0.AUIXIPVA3rDDaINnb2S2CQ">
+  </div>
   </div>
 </div>
