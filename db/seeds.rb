@@ -67,10 +67,10 @@ put_photo_to_user(User.second, 'https://avatars0.githubusercontent.com/u/4860496
 put_photo_to_user(User.third, 'https://avatars2.githubusercontent.com/u/54837955?v=4')
 
 # johanna@gmail.com
-put_photo_to_user(User.third, 'https://avatars3.githubusercontent.com/u/55392520?v=4')
+put_photo_to_user(User.fourth, 'https://avatars3.githubusercontent.com/u/55392520?v=4')
 
 # paul@gmail.com
-put_photo_to_user(User.third, 'https://avatars3.githubusercontent.com/u/54004476?v=4')
+put_photo_to_user(User.fifth, 'https://avatars3.githubusercontent.com/u/54004476?v=4')
 puts 'Creating trips...'
 
 trips_attributes = [
