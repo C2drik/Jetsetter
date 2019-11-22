@@ -17,7 +17,7 @@
             <!-- END SIDEBAR USER TITLE -->
             <!-- SIDEBAR BUTTONS -->
             <div class="profile-userbuttons">
-              <%= link_to 'Vols disponibles', trips_path, class:"btn btn-success btn-sm" %>
+              <%= link_to 'Available flights', trips_path, class:"btn btn-success btn-sm" %>
             </div>
                  <div class="portlet light bordered">
                                                       <!-- STAT -->
@@ -50,7 +50,7 @@
         <div class="col-md-9">
           <div class="profile-content">
              <div class="container mt-5">
-                <h1>Mes réservations de vol</h1>
+                <h1>My bookings</h1>
 
                 <select id="trip-status-filter-btn">
                     <option value="#">select a trip status:</option>
@@ -72,13 +72,13 @@
             <table class="table">
             <thead>
               <tr>
-                <th scope="col">Statut</th>
-                <th scope="col">Départ</th>
+                <th scope="col">Status</th>
+                <th scope="col">Start City</th>
                 <th scope="col">Destination</th>
-                <th scope="col">Date de départ</th>
-                <th scope="col">Date d'arrivée</th>
-                <th scope="col">Nom du Jet</th>
-                <th scope="col">Prix</th>
+
+                <th scope="col">Departure date</th>
+                <th scope="col">Arrival date</th>
+                <th scope="col">Price</th>
 
               </tr>
             </thead>
@@ -98,7 +98,6 @@
                 <td><%= b.trip.end_city %></td>
                 <td><%= b.trip.start_date.strftime("%d/%m/%Y") %></td>
                 <td><%= b.trip.end_date.strftime("%d/%m/%Y") %></td>
-                <td><%= b.trip.jet_name %></td>
                 <td><%= b.trip.price %> € HT</td>
                 <% if b.status == 'confirmed' %>
                   <td><%= link_to 'Add a review', trip_booking_path(b.trip,b), class:"btn btn-success btn-sm" %>
@@ -109,7 +108,7 @@
           </table>
 
 
-          <h1>Mes propositions </h1>
+          <h1>My flights</h1>
     <!--
           <ul>
               <% @trips.each do |t| %>
@@ -122,12 +121,11 @@
       <thead>
         <tr>
           <th scope="col"></th>
-          <th scope="col">Départ</th>
+          <th scope="col">Start city</th>
           <th scope="col">Destination</th>
-          <th scope="col">Date de départ</th>
-          <th scope="col">Date d'arrivée</th>
-          <th scope="col">Nom du Jet</th>
-          <th scope="col">Prix</th>
+          <th scope="col">Departure date</th>
+          <th scope="col">Arrival date</th>
+          <th scope="col">Price</th>
         </tr>
       </thead>
       <tbody>
@@ -138,7 +136,6 @@
           <td><%= t.end_city %></td>
           <td><%= t.start_date.strftime("%d/%m/%Y") %></td>
           <td><%= t.end_date.strftime("%d/%m/%Y") %></td>
-          <td><%= t.jet_name %></td>
           <td><%= t.price %> € HT</td>
 
 
@@ -146,6 +143,7 @@
           <% end %>
       </tbody>
     </table>
+
               <table class="table">
                 <h1>Mes reviews </h1>
                 <thead>
@@ -168,8 +166,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
