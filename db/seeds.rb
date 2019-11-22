@@ -36,10 +36,6 @@ users_attributes = [
 User.create!(users_attributes)
 
 # creer un user
-file = File.open('https://meme.eq8.eu/noidea.jpg')
-user = User.new(email: "john@doe.com", password: "password")
-article.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
-user.save!
 
 puts 'Creating trips...'
 
@@ -71,7 +67,6 @@ trips_attributes = [
     duration: 1.30,
     jet_id: 2,
     price:  6.000,
-    duration: 1.30,
     jet_name:  'BOMBER',
     jet_model: 'XERT',
     user_id: "44",
@@ -88,7 +83,6 @@ trips_attributes = [
     duration: 1,
     jet_id: 3,
     price:  7.500,
-    duration: 1,
     jet_name:  'GLOBAL',
     jet_model: 'PIKT',
     user_id: "44",
@@ -106,7 +100,6 @@ trips_attributes = [
     duration: 2,
     jet_id: 4,
     price:  10.000,
-    duration: 2,
     jet_name:  'EMBRAER',
     jet_model: 'CROE',
     user_id: "44",
@@ -124,7 +117,6 @@ trips_attributes = [
     duration: 1,
     jet_id: 5,
     price:  2.500,
-    duration: 1,
     jet_name:  'LEGACY',
     jet_model: 'KLIE',
     user_id: "44",
@@ -142,7 +134,6 @@ trips_attributes = [
     duration: 1.30,
     jet_id: 6,
     price:  5.250,
-    duration: 1.30,
     jet_name:  'GULFSTREAM',
     jet_model: 'HASQ',
     user_id: "44",
