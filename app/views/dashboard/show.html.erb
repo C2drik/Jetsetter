@@ -75,9 +75,11 @@
                 <th scope="col">Status</th>
                 <th scope="col">Start City</th>
                 <th scope="col">Destination</th>
+
                 <th scope="col">Departure date</th>
                 <th scope="col">Arrival date</th>
                 <th scope="col">Price</th>
+
               </tr>
             </thead>
             <tbody>
@@ -97,6 +99,9 @@
                 <td><%= b.trip.start_date.strftime("%d/%m/%Y") %></td>
                 <td><%= b.trip.end_date.strftime("%d/%m/%Y") %></td>
                 <td><%= b.trip.price %> € HT</td>
+                <% if b.status == 'confirmed' %>
+                  <td><%= link_to 'Add a review', trip_booking_path(b.trip,b), class:"btn btn-success btn-sm" %>
+                <% end %>
               </tr>
                 <% end %>
             </tbody>
@@ -132,30 +137,30 @@
           <td><%= t.start_date.strftime("%d/%m/%Y") %></td>
           <td><%= t.end_date.strftime("%d/%m/%Y") %></td>
           <td><%= t.price %> € HT</td>
+
+
         </tr>
           <% end %>
       </tbody>
     </table>
-          <table class="table">
-            <h1>My reviews </h1>
-            <thead>
-              <tr>
-                <th scope="col">User</th>
-                <th scope="col">Review</th>
-              </tr>
+
+              <table class="table">
+                <h1>Mes reviews </h1>
+                <thead>
+                  <tr>
+                    <th scope="col">Utilisateur</th>
+                    <th scope="col">Review</th>
+                  </tr>
+                </thead>
                 <tbody>
-                <tr>
-                  <td>"current user"</td>
-                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-                </tr>
-              </tbody>
-            </thead>
-          </table>
+                  <% @reviews.each do |booking| %>
+                    <tr>
+                      <td><%= booking.user.email %></td>
+                      <td><%= booking.review %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
         </div>
       </div>
     </div>
