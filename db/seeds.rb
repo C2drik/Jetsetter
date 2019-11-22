@@ -16,7 +16,7 @@ require 'open-uri'
 puts 'Cleaning database...'
 Booking.destroy_all
 Trip.destroy_all
-User.destroy_all
+# User.destroy_all
 
 puts 'Creating users...'
 users_attributes = [
