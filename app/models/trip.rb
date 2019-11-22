@@ -8,4 +8,9 @@ class Trip < ApplicationRecord
   validates :jet_name, presence: true
   validates :price, presence: true
 
+  before_save :geocode_bookings
+
+  def geocode_bookings
+    bookings.each(&:geocode_endpoints) if bookings.any?
+  end
 end
