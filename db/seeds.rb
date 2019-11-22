@@ -74,7 +74,6 @@ put_photo_to_user(User.fifth, 'https://avatars3.githubusercontent.com/u/54004476
 puts 'Creating trips...'
 
 trips_attributes = [
-
 {
     city: 'Paris',
     start_date: '23th november 2019',

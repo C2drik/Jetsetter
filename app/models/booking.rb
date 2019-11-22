@@ -1,10 +1,12 @@
-# require 'geocoder'
+require 'geocoder'
 
 class Booking < ApplicationRecord
   STATUSES = ["pending", "confirmed"]
   belongs_to :user
   belongs_to :trip
   validates :status, inclusion: { in: STATUSES }
+
+  after_create_commit :geocode_endpoints
 
   def geocode_endpoints
     geocoded = Geocoder.search(start_city).first
