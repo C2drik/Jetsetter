@@ -1,4 +1,10 @@
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "dashboard-banner.jpg", height: 500, width: 1080 %>')">
+  <div class="container">
+    <h1>Your dashboard</h1>
+    <p></p>
+    <a class="btn btn-flat" href="#"></a>
+  </div>
+</div>
     <div class="container">
         <div class="row profile" display="flex">
         <div class="col-md-3">
@@ -16,8 +22,11 @@
             </div>
             <!-- END SIDEBAR USER TITLE -->
             <!-- SIDEBAR BUTTONS -->
+
             <div class="profile-userbuttons">
-              <%= link_to 'Vols disponibles', trips_path, class:"btn btn-success btn-sm" %>
+
+              <%= link_to 'Available flights', trips_path, class:"btn btn-success btn-sm" %>
+
             </div>
                  <div class="portlet light bordered">
                                                       <!-- STAT -->
@@ -26,20 +35,12 @@
                 </div>
                 <!-- END STAT -->
      <div>
-      <h4 class="profile-desc-title text-center"">About Jason Davis</h4>
-      <span class="profile-desc-text"> "Story of his life. Very interesting." </span>
-      <div class="margin-top-20 profile-desc-link">
+      <h4 class="profile-desc-title text-center">About Jason Davis</h4>
+      <span class="profile-desc-text text-center m-3"> "Story of his life. Very interesting." </span>
+      <div class="margin-top-20 profile-desc-link text-center m-3">
           <i class="fa fa-globe"></i>
-          <a href="https://www.apollowebstudio.com">apollowebstudio.com</a>
+          <a href="https://www.apollowebstudio.com">lewagon.com</a>
       </div>
-      <div class="margin-top-20 profile-desc-link">
-          <i class="fa fa-twitter"></i>
-          <a href="https://www.twitter.com/jasondavisfl/">@jasondavisfl</a>
-      </div>
-      <div class="margin-top-20 profile-desc-link">
-          <i class="fa fa-facebook"></i>
-          <a href="https://www.facebook.com/">JasonDavisFL</a>
-       </div>
      </div>
    </div>
 
@@ -109,7 +110,8 @@
           </table>
 
 
-          <h1>Mes propositions </h1>
+
+          <h1>My flights</h1>
     <!--
           <ul>
               <% @trips.each do |t| %>
