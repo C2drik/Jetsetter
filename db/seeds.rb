@@ -5,12 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# file = URI.open('https://res.cloudinary.com/anniou/image/upload/v1574330792/nqeiqrkrwl2n18flljpa.jpg')
-# trip = Trip.new(title: 'NES', body: "A great console")
-# trip.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
-# # Here we write article.photo.attach(...) because we wrote has_one_attached :photo in app/models article.rb
-# trip.save
-
 
 
 puts 'Cleaning database...'
@@ -71,6 +65,7 @@ trips_attributes = [
     duration: 1.30,
     jet_id: 2,
     price:  6.000,
+    duration: 1.30,
     jet_name:  'BOMBER',
     jet_model: 'XERT',
     user_id: "44",
@@ -87,6 +82,7 @@ trips_attributes = [
     duration: 1,
     jet_id: 3,
     price:  7.500,
+    duration: 1,
     jet_name:  'GLOBAL',
     jet_model: 'PIKT',
     user_id: "44",
@@ -104,6 +100,7 @@ trips_attributes = [
     duration: 2,
     jet_id: 4,
     price:  10.000,
+    duration: 2,
     jet_name:  'EMBRAER',
     jet_model: 'CROE',
     user_id: "44",
@@ -121,6 +118,7 @@ trips_attributes = [
     duration: 1,
     jet_id: 5,
     price:  2.500,
+    duration: 1,
     jet_name:  'LEGACY',
     jet_model: 'KLIE',
     user_id: "44",
@@ -138,6 +136,7 @@ trips_attributes = [
     duration: 1.30,
     jet_id: 6,
     price:  5.250,
+    duration: 1.30,
     jet_name:  'GULFSTREAM',
     jet_model: 'HASQ',
     user_id: "44",
