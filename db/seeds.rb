@@ -54,36 +54,11 @@ users_attributes = [
 User.create!(users_attributes)
 file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/tu4sfe6rgefaundyisec.jpg')
 anniou = User.new(
-  email: 'anniou@gmail.com',
-  password: '123456'
-  ),
-file = URI.open('https://avatars2.githubusercontent.com/u/54837955?v=4')
-muriel = User.new(
-  email: 'muriel@gmail.com',
-  password: '123456'
-  ),
-file = URI.open('https://avatars3.githubusercontent.com/u/55392520?v=4')
-johanna = User.new(
-  email: 'johanna@gmail.com',
-  password: '123456'
-  ),
-file = URI.open('https://avatars3.githubusercontent.com/u/54004476?v=4')
-paul = User.new(
-  email: 'paul@gmail.com',
-  password: '123456'
-  ),
-file = URI.open('https://avatars3.githubusercontent.com/u/35662842?v=4')
-silvia = User.new(
-  email: 'silvia@gmail.com',
+  email: 'anniou2@gmail.com',
   password: '123456'
   )
-
-# anniou.photo.attach(io: file, filename: 'anniou.jpg', content_type: 'image/jpg')
+anniou.photo.attach(io: file, filename: 'anniou.jpg', content_type: 'image/jpg')
 anniou.save
-muriel.save
-johanna.save
-paul.save
-silvia.save
 
 
 puts 'Creating trips...'
@@ -115,6 +90,7 @@ trips_attributes = [
     end_city: 'Dublin',
     jet_id: 2,
     price:  6.000,
+    duration: 2,
     jet_name:  'BOMBER',
     jet_model: 'XERT',
     user_id: "44",
@@ -130,6 +106,7 @@ trips_attributes = [
     end_city: 'Amsterdam',
     jet_id: 3,
     price:  7.500,
+    duration: 1.30,
     jet_name:  'GLOBAL',
     jet_model: 'PIKT',
     user_id: "44",
@@ -146,6 +123,7 @@ trips_attributes = [
     end_city: 'Bruges',
     jet_id: 4,
     price:  10.000,
+    duration: 2,
     jet_name:  'EMBRAER',
     jet_model: 'CROE',
     user_id: "44",
@@ -162,6 +140,7 @@ trips_attributes = [
     end_city: 'Madrid',
     jet_id: 5,
     price:  2.500,
+    duration: 1,
     jet_name:  'LEGACY',
     jet_model: 'KLIE',
     user_id: "44",
@@ -176,6 +155,7 @@ trips_attributes = [
     end_date: '27th november 2019',
     start_city: 'Barcelona',
     end_city: 'Berlin',
+    duration: 2,
     jet_id: 6,
     price:  5.250,
     jet_name:  'GULFSTREAM',
