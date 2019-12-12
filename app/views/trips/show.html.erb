@@ -9,32 +9,35 @@
 <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
 
 <div class="container mt-5">
-  <h1 class="hache-title">Flight details</h1>
-<br/>
-<div class="itinerary">
-  <h2>ITINERARY</h2>
-  <p><%= @trip.start_city %> -> <%= @trip.end_city %></p>
-</div>
-<br/>
-<div class="duration">
-  <h2>DURATION</h2>
-  <p><%= @trip.duration %> H</p>
-</div>
-<br/>
-<div class=jet-model>
-  <h2>JET MODEL</h2>
-  <p><%= @trip.jet_model %> H</p>
-</div>
-<br/>
-<div class="price">
-  <h2>PRICE</h2>
-  <p><%= @trip.price %> €</p>
-</div>
-<br/>
-<div class="price">
+  <div class="card-cc">
+        <h1 class="hache-title">Flight details</h1>
+      <br/>
+      <div class="itinerary">
+        <h2>ITINERARY</h2>
+        <p><%= @trip.start_city %> -> <%= @trip.end_city %></p>
+      </div>
+      <br/>
+      <div class="duration">
+        <h2>DURATION</h2>
+        <p><%= @trip.duration %> H</p>
+      </div>
+      <br/>
+      <div class=jet-model>
+        <h2>JET MODEL</h2>
+        <p><%= @trip.jet_model %> H</p>
+      </div>
+      <br/>
+      <div class="price">
+        <h2>PRICE</h2>
+        <p><%= @trip.price %> €</p>
+      </div>
+      <br/>
+      <div class="price">
 
+      </div>
+      <br/>
+          <div class="link">
+            <%= link_to 'Book', trip_bookings_path(@trip), method: :post, class: 'btn btn-ghost' %>
+          </div>
+  </div>
 </div>
-<br/>
-    <div class="link">
-      <%= link_to 'Book', trip_bookings_path(@trip), method: :post, class: 'btn btn-ghost' %>
-    </div>
