@@ -5,27 +5,30 @@
     <a class="btn btn-flat" href="#"></a>
   </div>
 </div>
-<div class="container mt-5">
-<!-- <p>TripsController#New</p> -->
 
-<h1 class="text-center m-5">Offer a flight with Jetsetter</h1>
+    <h1 class="text-center m-5">Offer a flight with Jetsetter</h1>
 
+<div class="container d-flex justify-content-between mt-5" style="margin-left: 97px;">
+  <div class="element1 m-4">
     <div class="form-group-new">
         <%= simple_form_for @trip do |f| %>
           <%= f.input :start_date, label: 'Start date'%>
           <%= f.input :end_date, label: 'End date' %>
-          <%= f.input :start_city, label: "", placeholder: "Your start city..." %>
-          <%= f.input :end_city, label: '', placeholder: "Your destination city..." %>
-          <%= f.input :duration, label: " ", placeholder: "How long does your flight last?..." %>
-          <%= f.input :price, label: " ", placeholder: "How much ?..." %>
-          <%= f.input :jet_name, label: " ", placeholder: "Your jet name..." %>
-          <%= f.input :jet_model, label: " ", placeholder: "Your jet model..."%>
-          <%= f.input :jet_seats, label: " ", placeholder: "Your jet seats..." %>
-          <%= f.input :jet_description, label: " ", placeholder: "Some description..."%>
+          <%= f.input :start_city, label: "Departure", placeholder: "Your start city..." %>
+          <%= f.input :end_city, label: "Destination", placeholder: "Your destination city..." %>
+          <%= f.input :duration, label: "How long does your flight ?", placeholder: "How long does your flight last?..." %>
+          <%= f.input :price, label: "How much ?", placeholder: "$ ..." %>
+          <%= f.input :jet_name, label: "Jet name", placeholder: "Your jet name..." %>
+          <%= f.input :jet_model, label: "jet model ", placeholder: "Your jet model..."%>
+          <%= f.input :jet_seats, label: "Seats ", placeholder: "Your jet seats..." %>
+          <%= f.input :jet_description, label: "Some description", placeholder: "Some description..."%>
           <%= f.input :photo, as: :file %>
           <%= f.submit "add a trip", class: "btn btn-ghost-confirmed" %>
         <% end %>
     </div>
+  </div>
+  <div class="element2 m-4">
+    <%= image_tag 'departure-jet.jpg', width: 700, height: 910 %>
+  </div>
+
 </div>
-
-
