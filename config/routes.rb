@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
   root to: 'trips#index'
     resources :trips do
@@ -7,7 +6,5 @@ Rails.application.routes.draw do
 
     end
     resources :bookings, only: [:index, :show]
-
-    get '/dashboard', to: 'dashboard#show'
-
+    resource :dashboard, only: [:show]
   end
