@@ -1,12 +1,11 @@
 
-<h1>Bookings#show</h1>
  <div class="container mt-5">
-    <p>Bookings#show</p>
+
     <h1 class="text-center">Your trip is confirmed</h1>
     <br>
     <p class="text-center">Flight details</p>
   <div class="card-container-2">
-    <div class="card u-clearfix">
+    <div class="card-c u-clearfix">
       <div class="card-body">
         <span class="card-number card-circle subtle">01</span>
         <span class="card-author subtle"> </span>
@@ -24,8 +23,10 @@
   </div>
 </div>
 
-<%= simple_form_for [@trip, @booking] do |f| %>
-  <%= f.input :review %>
-  <%= f.submit "add a review", class: "btn btn-success" %>
-<% end %>
+<div class="form-group-new">
+  <%= simple_form_for [@trip, @booking] do |f| %>
+    <%= f.input :review %>
+    <%= f.submit "add a review", class: "btn btn-success" %>
+  <% end %>
+</div>
 
